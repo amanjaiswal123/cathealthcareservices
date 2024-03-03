@@ -1,10 +1,348 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CAT Health Care Services</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Swiper slider-->
+    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+    <!-- Modal video-->
+    <link rel="stylesheet" href="vendor/modal-video/css/modal-video.min.css">
+    <!-- Leaflet-->
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&amp;font-display=swap">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/catlogo.png">
+  </head>
+  <body>
+    <!-- NAVBAR-->
+    <header class="header fixed-top header-animated">
+      <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <div class="container"><a class="navbar-brand" href="index.html"><img src="img/catlogo.png" alt="..."></a>
+          <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <!-- Link--><a class="nav-link active" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <!-- Link--><a class="nav-link" href="about.html">About us</a>
+              </li>
+              <li class="nav-item me-2">
+                <!-- Link--><a class="nav-link" href="contact.html">Contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- GET a QUOTE MODAL -->
+    <div class="modal fade" id="quoteForm" tabindex="-1" role="dialog" aria-labelledby="quoteForm" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content p-md-3">
+          <div class="modal-header border-0">
+            <h4 class="modal-title">Request a <span class="text-primary">quote</span></h4>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="#">
+              <div class="row gy-3">
+                <div class="col-lg-6">
+                  <label class="form-label text-sm" for="firstname">First name<span class="text-primary ms-1">&#42;</span></label>
+                  <input class="form-control" id="firstname" type="text" placeholder="Enter your first name" required>
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label text-sm" for="lastname">Last name<span class="text-primary ms-1">&#42;</span></label>
+                  <input class="form-control" id="lastname" type="text" placeholder="Enter your last name" required>
+                </div>
+                <div class="col-lg-12">
+                  <label class="form-label text-sm" for="email">Email address<span class="text-primary ms-1">&#42;</span></label>
+                  <input class="form-control" id="email" type="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label text-sm" for="phone">Phone number <small class="fw-light small text-gray">optional</small></label>
+                  <input class="form-control" id="phone" type="tel" placeholder="Enter your phone number">
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label text-sm" for="projecttype">Project type<span class="text-primary ms-1">&#42;</span></label>
+                  <input class="form-control" id="projecttype" type="text" placeholder="Enter your project type" required>
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label text-sm" for="budget">Estimated budget<span class="text-primary ms-1">&#42;</span></label>
+                  <input class="form-control" id="budget" type="text" placeholder="Enter your estimated budget" required><small class="form-text text-gray-500 ms-3">Project budget in $</small>
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label text-sm" for="timeframe">Time frame<span class="text-primary ms-1">&#42;</span></label>
+                  <input class="form-control" id="timeframe" type="text" placeholder="Maximum time for the project" required>
+                </div>
+                <div class="col-lg-12">
+                  <label class="form-label text-sm" for="projectdetail">Project details<span class="text-primary ms-1">&#42;</span></label>
+                  <textarea class="form-control" id="projectdetail" rows="5" placeholder="Provide a short brief about your project" required></textarea>
+                </div>
+                <div class="col-lg-12">
+                  <button class="btn btn-primary" type="submit">Submit your request</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- HERO SECTION-->
+    <section class="hero hero-home with-pattern d-flex align-items-center py-5">
+      <div class="container py-5 mt-5">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-5 mb-md-0">
 
-</body>
+
+            <h1 class="mb-3">Ready For Your Next Healthcare <span class="text-primary">Opportunity? </span></h1>
+            <p class="text-muted">For healthcare professionals, from Registered Nurses to social workers, Cat Health Care Services is your premier staffing ally. We offer extensive placement services, covering acute and long-term care, travel nursing, and more, in NYC, New Jersey, Long Island, and nationwide. Discover our range of contract, temporary, or permanent roles, all tailored for your professional advancement.</p>
+              <div class="ms-3"><span class="text-muted d-block line-height-sm"></span><strong class="text-uppercase text-dark"></strong></div></a>
+          </div>
+          <div class="col-md-5 ml-auto">
+            <div class="img-gradient img-gradient-right"><img class="img-fluid shadow rounded" src="img/hero-img.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2> Cat Health Care Services, where we blend ingenuity with expertise to transform healthcare delivery</h2>
+          </div>
+          <div class="col-lg-6">
+            <p class="text-muted">At Cat Health Care Services, we grasp the critical nature of matching the ideal candidate with the right healthcare position. Our team employs a personalized matchmaking strategy to ensure our clients receive top-tier healthcare professionals and our candidates find fulfilling and rewarding roles. We invest time to deeply understand the unique requirements and aspirations of both parties to facilitate successful placements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pb-5">
+      <div class="container pb-5">
+        <div class="row gy-3">
+          <div class="col-lg-4">
+            <div class="d-flex">
+              <div class="icon-block rounded-circle"><i class="fas fa-check"></i></div>
+              <div class="ms-3">
+                <h5> Quality-vetted professionals</h5>
+                <p class="text-sm text-muted">An expansive network of vetted healthcare professionals and cutting-edge technology ensure streamlined and effective staffing solutions.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex">
+              <div class="icon-block rounded-circle"><i class="fas fa-check"></i></div>
+              <div class="ms-3">
+                <h5> Tailored staffing solutions</h5>
+                <p class="text-sm text-muted">At Cat Health Care Services, every touchpoint with our professionals and partners is an opportunity to demonstrate our unwavering dedication to quality and support in the healthcare staffing realm.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex">
+              <div class="icon-block rounded-circle"><i class="fas fa-check"></i></div>
+              <div class="ms-3">
+                <h5> State-of-the-art technology</h5>
+                <p class="text-sm text-muted">Dedicated to empowering our clients and healthcare professionals with outstanding service, advanced technology, and unparalleled employment opportunities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pb-5">
+      <div class="container pb-5">
+        <div class="card shadow text-center map-bg">
+          <div class="card-body p-lg-5">
+            <div class="p-4">
+              <div class="row mb-5">
+                <div class="col-lg-7 mx-auto">
+                  <p class="h6 text-primary text-uppercase">Services</p>
+                  <h2>Our <span class="text-primary">Unique </span> Approach to Healthcare Staffing</h2>
+                  <p class="text-muted">Cat Health Care Services offers a comprehensive spectrum of nursing staffing options, ranging from single shifts to emergency staff augmentation. We are attentive partners, collaborating closely, offering guidance, and aiding your team in sourcing the optimal solutions for your essential nursing staffing challenges</p>
+                </div>
+              </div>
+              <div class="row gy-3">
+                <div class="col-lg-4">
+                  <svg class="svg-icon text-primary mb-4 svg-icon-big svg-icon-light">
+                    <use xlink:href="#quality-1"> </use>
+                  </svg>
+                  <h5>Our Philosophy</h5>
+                  <p class="text-muted mb-0">Dedicated to empowering our clients and healthcare professionals with outstanding service, advanced technology, and unparalleled employment opportunities.</p>
+                </div>
+                <div class="col-lg-4">
+                  <svg class="svg-icon text-primary mb-4 svg-icon-big svg-icon-light">
+                    <use xlink:href="#sales-up-1"> </use>
+                  </svg>
+                  <h5>Our Resources</h5>
+                  <p class="text-muted mb-0">An expansive network of vetted healthcare professionals and cutting-edge technology ensure streamlined and effective staffing solutions.</p>
+                </div>
+                <div class="col-lg-4">
+                  <svg class="svg-icon text-primary mb-4 svg-icon-big svg-icon-light">
+                    <use xlink:href="#shield-security-1"> </use>
+                  </svg>
+                  <h5>Our Commitment</h5>
+                  <p class="text-muted mb-0">At Cat Health Care Services, every touchpoint with our professionals and partners is an opportunity to demonstrate our unwavering dedication to quality and support in the healthcare staffing realm.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pb-5">
+      <div class="container pb-5">
+        <div class="row">
+          <div class="col-lg-5 mx-auto mb-5 mb-lg-0 d-flex flex-column">
+            <div class="numeric-block order-2 order-lg-1 mb-lg-5">
+              <div class="numeric-block-count">1</div>
+              <p class="text-muted text-uppercase mb-2">Our Approach</p>
+              <h3>People Are Our Process</h3>
+              <p class="text-muted py-3">At Cat Health Care Services, we recognize that there's an individual behind every staffing match. The following steps are designed to guarantee an ideal fit consistently.</p>
+            </div><img class="flex-grow-0 img-fluid shadow rounded order-1 order-lg-2 mb-5 mb-lg-0" src="img/demo-img-6.jpg" alt="">
+          </div>
+          <div class="col-lg-5 mx-auto d-flex flex-column"><img class="flex-grow-0 img-fluid shadow rounded mb-5" src="img/demo-img-2.jpg" alt="">
+            <div class="numeric-block">
+              <div class="numeric-block-count">2</div>
+              <p class="text-muted text-uppercase mb-2"></p>
+              <h3>Collaborative</h3>
+              <p class="text-muted py-3">We collaborate intimately with our clients to grasp their unique staffing requirements and customize our services to meet those demands.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 bg-primary map-bg text-white">
+      <div class="container text-center py-5">
+        <div class="row mb-4">
+          <div class="col-lg-7 mx-auto">
+            <p class="h6 text-uppercase">Work process</p>
+            <h2>Every Project, Expertly Crafted</h2>
+            <p>At Cat Health Care Services, we channel seasoned expertise into each assignment. Our approach ensures precision and quality at every step.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card border-0 card-hover-bg">
+              <div class="card-body p-lg-5">
+                <svg class="svg-icon svg-icon-big svg-icon-light mb-4">
+                  <use xlink:href="#mental-health-1"> </use>
+                </svg>
+                <h4>Conceptualization </h4>
+                <p class="text-sm mb-0">Every great solution begins with a solid concept. We synthesize cutting-edge healthcare insights with your staffing needs to craft the blueprint of a successful match.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card border-0 card-hover-bg">
+              <div class="card-body p-lg-5">
+                <svg class="svg-icon svg-icon-big svg-icon-light mb-4">
+                  <use xlink:href="#paper-stack-1"> </use>
+                </svg>
+                <h4>Strategic Planning </h4>
+                <p class="text-sm mb-0">We meticulously plan every detail, considering the complexities of healthcare staffing, to ensure a seamless fit between our professionals and your organization.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card border-0 card-hover-bg">
+              <div class="card-body p-lg-5">
+                <svg class="svg-icon svg-icon-big svg-icon-light mb-4">
+                  <use xlink:href="#design-1"> </use>
+                </svg>
+                <h4>Implementation </h4>
+                <p class="text-sm mb-0">With a comprehensive strategy in place, we bring our plans to fruition. We focus on executing with precision, ensuring each healthcare professional is positioned for success.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="map-bg">
+      <div class="container py-5 border-bottom z-index-20 position-relative">
+        <div class="row pt-5 gy-4">
+          <!-- Logo and contact info (Considered as "Home" section) -->
+          <div class="col-lg-4 col-md-6">
+            <img class="mb-3" src="img/logo.svg" alt="" width="80">
+            <ul class="list-unstyled text-muted">
+            </ul>
+
+            <ul class="list-inline text-muted">
+              <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+          </div>
+          <!-- About Us Section -->
+          <div class="col-lg-4 col-md-6">
+            <h4>About us</h4>
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-1"><a class="text-sm reset-anchor" href="#!">About us</a></li>
+            </ul>
+          </div>
+          <!-- Contact Us Section -->
+          <div class="col-lg-4 col-md-6">
+            <h4>Contact us</h4>
+            <ul class="list-unstyled text-muted mb-0">
+              <li><a class="reset-anchor text-sm" href="mailto:Iso@company.com">Email: inquiry@cat-hs.com</a></li>
+              <li><a class="reset-anchor text-sm" href="tel:+975478985">Phone: +1 (201)-792-7332</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container py-4 z-index-20 position-relative">
+        <div class="row text-center">
+          <div class="col-lg-6 p-lg-0 text-lg-start">
+            <p class="text-muted text-sm mb-0">© 2023 Cat Health Care Services, All Rights Reserved.</p>
+          </div>
+          <div class="col-lg-6 p-lg-0 text-lg-end">
+            <p class="text-muted text-sm mb-0"><a class="text-primary reset-anchor" href="https://bootstrapious.com/p/bootstrap-corporate-template"></a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll top button-->
+    <div class="scroll-top-btn" id="scrollTop"><i class="fas fa-long-arrow-alt-up"></i><span class="fw-bold text-uppercase small">To the Top</span></div>
+    <!-- JavaScript files-->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="vendor/modal-video/js/modal-video.min.js"></script>
+    <script src="vendor/leaflet/leaflet.js"></script>
+    <script src="js/front.js"></script>
+    <script>
+      // ------------------------------------------------------- //
+      //   Inject SVG Sprite -
+      //   see more here
+      //   https://css-tricks.com/ajaxing-svg-sprite/
+      // ------------------------------------------------------ //
+      function injectSvgSprite(path) {
+
+          var ajax = new XMLHttpRequest();
+          ajax.open("GET", path, true);
+          ajax.send();
+          ajax.onload = function(e) {
+          var div = document.createElement("div");
+          div.className = 'd-none';
+          div.innerHTML = ajax.responseText;
+          document.body.insertBefore(div, document.body.childNodes[0]);
+          }
+      }
+      // this is set to BootstrapTemple website as you cannot
+      // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+      // while using file:// protocol
+      // pls don't forget to change to your domain :)
+      injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
+
+    </script>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </body>
 </html>

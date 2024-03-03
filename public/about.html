@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Iso | Corporate Bootstrap template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Swiper slider-->
+    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+    <!-- Modal video-->
+    <link rel="stylesheet" href="vendor/modal-video/css/modal-video.min.css">
+    <!-- Leaflet-->
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&amp;font-display=swap">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/catlogo.png">
+  </head>
+  <body>
+    <!-- NAVBAR-->
+    <header class="header fixed-top active">
+      <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <div class="container"><a class="navbar-brand" href="index.html"><img src="img/catlogo.png" alt="..."></a>
+          <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <!-- Link--><a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <!-- Link--><a class="nav-link active" href="about.html">About us</a>
+              </li>
+              <li class="nav-item me-2">
+                <!-- Link--><a class="nav-link" href="contact.html">Contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- GET a QUOTE MODAL -->
+    <div class="modal fade" id="quoteForm" tabindex="-1" role="dialog" aria-labelledby="quoteForm" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content p-md-3">
+          <div class="modal-header border-0">
+            <h4 class="modal-title">Request a <span class="text-primary">quote</span></h4>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="#">
+              <div class="row gy-3">
+                <div class="col-lg-6">
+                  <label class="form-label text-sm" for="firstname">First name<span class="text-primary ms-1">&#42;</span></label>
+                  <input class="form-control" id="firstname" type="text" placeholder="Enter your first name" required>
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label text-sm" for="lastname">Last name<span class="text-primary ms-1">&#42;</span></label>
+                  <input class="form-control" id="lastname" type="text" placeholder="Enter your last name" required>
+                </div>
+                <div class="col-lg-12">
+                  <label class="form-label text-sm" for="email">Email address<span class="text-primary ms-1">&#42;</span></label>
+                  <input class="form-control" id="email" type="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label text-sm" for="phone">Phone number <small class="fw-light small text-gray">optional</small></label>
+                  <input class="form-control" id="phone" type="tel" placeholder="Enter your phone number">
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label text-sm" for="projecttype">Project type<span class="text-primary ms-1">&#42;</span></label>
+                  <input class="form-control" id="projecttype" type="text" placeholder="Enter your project type" required>
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label text-sm" for="budget">Estimated budget<span class="text-primary ms-1">&#42;</span></label>
+                  <input class="form-control" id="budget" type="text" placeholder="Enter your estimated budget" required><small class="form-text text-gray-500 ms-3">Project budget in $</small>
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label text-sm" for="timeframe">Time frame<span class="text-primary ms-1">&#42;</span></label>
+                  <input class="form-control" id="timeframe" type="text" placeholder="Maximum time for the project" required>
+                </div>
+                <div class="col-lg-12">
+                  <label class="form-label text-sm" for="projectdetail">Project details<span class="text-primary ms-1">&#42;</span></label>
+                  <textarea class="form-control" id="projectdetail" rows="5" placeholder="Provide a short brief about your project" required></textarea>
+                </div>
+                <div class="col-lg-12">
+                  <button class="btn btn-primary" type="submit">Submit your request</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- HERO SECTION-->
+    <section class="hero with-pattern py-5 bg-light">
+      <div class="container py-5 my-5">
+        <div class="row mb-4">
+          <div class="col-md-7">
+            <p class="h6 text-uppercase text-primary">About us</p>
+            <h1>The Power of Connection in Healthcare</h1>
+            <p class="text-muted">At CAT Health Care Services, we believe in the transformative power of connecting the right talent with the right opportunities within the healthcare industry. Our mission is to streamline the recruitment process, making it easier, faster, and more efficient for both healthcare professionals and organizations.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <h4>We’re a Global Stakeholder Relations and Partnership Building Consultancy</h4>
+            <p class="text-muted">CAT Health Care Services is not just a recruitment agency; we're a global consultancy that builds bridges between healthcare entities and top-tier talent. Our expertise lies in understanding the nuanced needs of the healthcare sector and matching them with candidates who not only fit the bill but are also poised to excel.</p>
+          </div>
+          <div class="col-md-6">
+            <p class="text-muted">Our approach is holistic and personalized, focusing on creating long-term partnerships rather than one-off placements. This dedication to building and nurturing relationships has positioned us as a trusted advisor in the healthcare recruitment space, both domestically and internationally.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pulled-up-section">
+      <div class="container">
+        <div class="card shadow-lg bg-primary text-white with-pattern-full">
+          <div class="card-body p-lg-5">
+            <div class="row py-4 gy-4">
+              <div class="col-lg-4">
+                <div class="d-flex">
+                  <div class="icon-block bg-white flex-shrink-0">
+                    <svg class="svg-icon text-primary svg-icon-sm">
+                      <use xlink:href="#stack-1"> </use>
+                    </svg>
+                  </div>
+                  <div class="ms-3">
+                    <h5 class="mb-2">Simplicity And Choice</h5>
+                    <p class="text-sm">Simplicity and Choice in Healthcare Staffing</p>
+                    <ul class="list-check list-check-white mb-0 text-sm fw-normal">
+                      <li class="mb-1">Temporary and Contract Staffing</li>
+                      <li class="mb-1">Permanent Placement Services</li>
+                      <li class="mb-1">Executive Search and Leadership Recruitment</li>
+                      <li class="mb-1">Specialty Practice Areas Recruitment</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="d-flex">
+                  <div class="icon-block bg-white flex-shrink-0">
+                    <svg class="svg-icon text-primary svg-icon-sm">
+                      <use xlink:href="#quality-1"> </use>
+                    </svg>
+                  </div>
+                  <div class="ms-3">
+                    <h5 class="mb-2">Worry-Free Experience</h5>
+                    <p class="text-sm">Worry-Free Healthcare Recruitment.</p>
+                    <ul class="list-check list-check-white mb-0 text-sm fw-normal">
+                      <li class="mb-1">Credential Verification and Background Checks</li>
+                      <li class="mb-1">Customized Recruitment Strategy Development</li>
+                      <li class="mb-1">Onboarding Support and Follow-Up</li>
+                      <li class="mb-1">Talent Pool Management and Engagement</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="d-flex">
+                  <div class="icon-block bg-white flex-shrink-0">
+                    <svg class="svg-icon text-primary svg-icon-sm">
+                      <use xlink:href="#configuration-1"> </use>
+                    </svg>
+                  </div>
+                  <div class="ms-3">
+                    <h5 class="mb-2">Performance That Scale</h5>
+                    <p class="text-sm">Performance That Scales With Your Needs</p>
+                    <ul class="list-check list-check-white mb-0 text-sm fw-normal">
+                      <li class="mb-1">Scalable Recruitment Solutions</li>
+                      <li class="mb-1">Specialty and Sub-specialty Recruitment</li>
+                      <li class="mb-1">Nationwide and International Talent Acquisition</li>
+                      <li class="mb-1">Strategic Workforce Planning</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="row align-items-center pb-5 gy-5">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <div class="numeric-block">
+              <div class="numeric-block-count">1</div>
+              <p class="text-muted text-uppercase mb-2">Working closely togeather</p>
+              <h2>Simplifying Healthcare Recruitment</h2>
+              <p class="text-muted py-3">At CAT Health Care Services, our platform is designed to take the complexity out of healthcare recruitment. By integrating advanced technology with personalized service, we've created a user-friendly experience that connects healthcare professionals and organizations more effectively than ever before.</p>
+              <ul class="list-check row">
+                <li class="col-lg-6">
+                  <p class="mb-2 fw-light">Comprehensive Recruitment Solutions</p>
+                </li>
+                <li class="col-lg-6">
+                  <p class="mb-2 fw-light">Talent Pool Management and Engagement</p>
+                </li>
+                <li class="col-lg-6">
+                  <p class="mb-2 fw-light">Continuous Quality Improvement Processes</p>
+                </li>
+                <li class="col-lg-6">
+                  <p class="mb-2 fw-light">Strategic Workforce Planning</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-5 ms-auto order-1 order-lg-2">
+            <div class="img-gradient video-block img-gradient-right"><img class="img-fluid shadow rounded" src="img/demo-img-3.jpg" alt=""/><a class="video-btn" href="#!" data-video-id="B6uuIHpFkuo"><span class="video-btn-icon bg-primary text-white"><i class="fas fa-play"></i></span></a></div>
+          </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-7 order-2 order-lg-1">
+            <p class="text-muted text-uppercase mb-2">Our Best Services</p>
+            <h2>The Best Choice For Your Successful Business!</h2>
+            <p class="text-muted py-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit eum illum tempora? Ducimus eum culpa voluptates dolorem dolorum et sit nisi, mollitia animi porro fuga sequi.</p>
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <div class="d-flex">
+                  <div class="icon-block flex-shrink-0">
+                    <svg class="svg-icon text-primary svg-icon-sm">
+                      <use xlink:href="#paper-stack-1"> </use>
+                    </svg>
+                  </div>
+                  <div class="ms-3">
+                    <h5>Healthcare Leadership (C-Suite to staff level)</h5>
+                    <p class="text-sm mb-0">Empowering healthcare organizations with visionary leaders, from C-Suite to staff level, who drive excellence and innovation in patient care.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="d-flex">
+                  <div class="icon-block flex-shrink-0">
+                    <svg class="svg-icon text-primary svg-icon-sm">
+                      <use xlink:href="#sales-up-1"> </use>
+                    </svg>
+                  </div>
+                  <div class="ms-3">
+                    <h5>Nursing (RN, LPN, and more)</h5>
+                    <p class="text-sm mb-0">Connecting compassionate and skilled nursing professionals, including RNs and LPNs, with opportunities to make a difference in patients' lives.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="d-flex">
+                  <div class="icon-block flex-shrink-0">
+                    <svg class="svg-icon text-primary svg-icon-sm">
+                      <use xlink:href="#quality-1"> </use>
+                    </svg>
+                  </div>
+                  <div class="ms-3">
+                    <h5>Physicians & Advanced Practice Providers</h5>
+                    <p class="text-sm mb-0">Matching healthcare facilities with top-tier physicians and advanced practice providers to deliver superior patient outcomes.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="d-flex">
+                  <div class="icon-block flex-shrink-0">
+                    <svg class="svg-icon text-primary svg-icon-sm">
+                      <use xlink:href="#arrow-target-1"> </use>
+                    </svg>
+                  </div>
+                  <div class="ms-3">
+                    <h5>Non-Clinical / Support Staff</h5>
+                    <p class="text-sm mb-0"> Strengthening healthcare teams with dedicated non-clinical and support staff, ensuring smooth operations and quality patient care.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 order-1 order-lg-2">
+            <div class="img-gradient video-block img-gradient-right"><img class="img-fluid shadow rounded" src="img/demo-img-5.jpg" alt=""/></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 bg-primary text-white has-quote">
+      <div class="container py-5 z-index-20">
+        <div class="row text-center">
+          <div class="col-lg-7 mx-auto">
+            <h2 class="mb-4">"You only have to do a few things right in your life so long as you don’t do too many things wrong."</h2>
+            <p class="h6 text-uppercase mb-0">Henry Waren - Founder</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-5">           
+      <div class="container py-5 text-center">
+        <div class="row">
+          <div class="col-lg-7 mx-auto">
+            <p class="h6 text-uppercase text-primary">Newsletter</p>
+            <h2 class="mb-3">Stay up to date with useful tips via our newsletter</h2>
+            <form class="p-2 bg-white rounded shadow-sm">
+              <div class="input-group p-1">
+                <input class="form-control border-0 shadow-0" type="email" placeholder="Enter your email address">
+                <button class="btn btn-primary rounded ms-1" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="map-bg">
+      <div class="container py-5 border-bottom z-index-20 position-relative">
+        <div class="row pt-5 gy-4">
+          <!-- Logo and contact info (Considered as "Home" section) -->
+          <div class="col-lg-4 col-md-6">
+            <img class="mb-3" src="img/logo.svg" alt="" width="80">
+            <ul class="list-unstyled text-muted">
+            </ul>
+
+            <ul class="list-inline text-muted">
+              <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+          </div>
+          <!-- About Us Section -->
+          <div class="col-lg-4 col-md-6">
+            <h4>About us</h4>
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-1"><a class="text-sm reset-anchor" href="#!">About us</a></li>
+            </ul>
+          </div>
+          <!-- Contact Us Section -->
+          <div class="col-lg-4 col-md-6">
+            <h4>Contact us</h4>
+            <ul class="list-unstyled text-muted mb-0">
+              <li><a class="reset-anchor text-sm" href="mailto:Iso@company.com">Email: inquiry@cat-hs.com</a></li>
+              <li><a class="reset-anchor text-sm" href="tel:+975478985">Phone: +1 (201)-792-7332</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container py-4 z-index-20 position-relative">
+        <div class="row text-center">
+          <div class="col-lg-6 p-lg-0 text-lg-start">
+            <p class="text-muted text-sm mb-0">© 2023 Cat Health Care Services, All Rights Reserved.</p>
+          </div>
+          <div class="col-lg-6 p-lg-0 text-lg-end">
+            <p class="text-muted text-sm mb-0"><a class="text-primary reset-anchor" href="https://bootstrapious.com/p/bootstrap-corporate-template"></a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll top button-->
+    <div class="scroll-top-btn" id="scrollTop"><i class="fas fa-long-arrow-alt-up"></i><span class="fw-bold text-uppercase small">To the Top</span></div>
+    <!-- JavaScript files-->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="vendor/modal-video/js/modal-video.min.js"></script>
+    <script src="vendor/leaflet/leaflet.js"></script>
+    <script src="js/front.js"></script>
+    <script>
+      // ------------------------------------------------------- //
+      //   Inject SVG Sprite - 
+      //   see more here 
+      //   https://css-tricks.com/ajaxing-svg-sprite/
+      // ------------------------------------------------------ //
+      function injectSvgSprite(path) {
+      
+          var ajax = new XMLHttpRequest();
+          ajax.open("GET", path, true);
+          ajax.send();
+          ajax.onload = function(e) {
+          var div = document.createElement("div");
+          div.className = 'd-none';
+          div.innerHTML = ajax.responseText;
+          document.body.insertBefore(div, document.body.childNodes[0]);
+          }
+      }
+      // this is set to BootstrapTemple website as you cannot 
+      // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+      // while using file:// protocol
+      // pls don't forget to change to your domain :)
+      injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
+      
+    </script>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </body>
+</html>
